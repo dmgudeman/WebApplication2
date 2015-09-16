@@ -19,7 +19,7 @@ public class UserDB {
                 System.out.println("email: " + user.getEmail());
                 System.out.println("userId: " + user.getUserId());
                 System.out.println("FirstName: " + user.getFirstName());
-                System.out.println("LastNamet" + user.getLastName());
+                System.out.println("Location: " + user.getLocation());
             trans.commit();
         } catch (Exception e) {
             System.out.println(e);

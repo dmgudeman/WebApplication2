@@ -11,7 +11,7 @@ public class User implements Serializable {
     private Long userId;
     private String email;
     private String firstName;
-    private String lastName;
+    private String location;
 
     
     @Id
@@ -41,11 +41,11 @@ public class User implements Serializable {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

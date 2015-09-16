@@ -28,14 +28,14 @@ public class EmailListServlet extends HttpServlet {
         else if (action.equals("add")) {
             // get parameters from the request
             String firstName = request.getParameter("firstName");
-            String lastName = request.getParameter("lastName");
+            String location = request.getParameter("location");
             String email = request.getParameter("email");
 
             // store data in User object
             User user = new User();
             user.setEmail(email);
             user.setFirstName(firstName);
-            user.setLastName(lastName);
+            user.setLocation(location);
 
             // validate the parameters
             String message;
@@ -51,7 +51,7 @@ public class EmailListServlet extends HttpServlet {
                 System.out.println("email: " + user.getEmail());
                 System.out.println("userId: " + user.getUserId());
                 System.out.println("FirstName: " + user.getFirstName());
-                System.out.println("LastNamet" + user.getLastName());
+                System.out.println("LastName" + user.getLocation());
                 UserDB.insert(user);
             }
             request.setAttribute("user", user);

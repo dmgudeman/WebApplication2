@@ -18,8 +18,8 @@
         <label class="pad_top">First Name:</label>
         <input type="text" name="firstName" value="${user.firstName}" 
                required><br>
-        <label class="pad_top">Last Name:</label>
-        <input type="text" name="lastName" value="${user.lastName}"  
+        <label class="pad_top">Location:</label>
+        <input type="text" name="location" value="${user.location}"  
                required><br>        
         <label>&nbsp;</label>
         <input type="submit" value="Join Now" class="margin_left">
