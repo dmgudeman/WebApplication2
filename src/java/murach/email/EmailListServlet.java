@@ -50,7 +50,7 @@ public class EmailListServlet extends HttpServlet {
                 url = "/thanks.jsp";
                 System.out.println("THIS IS IN doPOST" );
                 System.out.println("email: " + user.getDate());
-                System.out.println("userId: " + user.getUserId());
+                System.out.println("userId: " + user.getApptId());
                 System.out.println("FirstName: " + user.getAppointment());
                 System.out.println("LastName" + user.getLocation());
                 UserDB.insert(user);

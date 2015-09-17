@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Entity
 public class User implements Serializable {
-    private Long userId;
+    private Long apptId;
     private String date;
     private String appointment;
     private String location;
@@ -17,12 +17,12 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     
-    public Long getUserId() {
-        return userId;
+    public Long getApptId() {
+        return apptId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setApptId(Long apptId) {
+        this.apptId = apptId;
     }
     
     public String getDate() {
