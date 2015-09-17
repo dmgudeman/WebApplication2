@@ -21,8 +21,13 @@ public class User implements Serializable {
         return apptId;
     }
 
+<<<<<<< HEAD
     public void setApptId(Long apptId) {
         this.apptId = apptId;
+=======
+    public void setApptId(Long userId) {
+        this.apptId = userId;
+>>>>>>> b7ae8741727185346e0d9b294769ccc4ea4af624
     }
     
     public String getDate() {
