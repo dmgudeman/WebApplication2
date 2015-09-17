@@ -9,8 +9,8 @@ import javax.persistence.Id;
 @Entity
 public class User implements Serializable {
     private Long userId;
-    private String email;
-    private String firstName;
+    private String date;
+    private String appointment;
     private String location;
 
     
@@ -25,20 +25,20 @@ public class User implements Serializable {
         this.userId = userId;
     }
     
-    public String getEmail() {
-        return email;
+    public String getDate() {
+        return date;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDate(String date) {
+        this.date = date;
     }
     
-    public String getFirstName() {
-        return firstName;
+    public String getAppointment() {
+        return appointment;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setAppointment(String appointment) {
+        this.appointment = appointment;
     }
 
     public String getLocation() {

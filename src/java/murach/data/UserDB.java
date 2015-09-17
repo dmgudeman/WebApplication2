@@ -16,9 +16,9 @@ public class UserDB {
         try {
             em.persist(user);
             System.out.println("THIS IS USERDB" );
-                System.out.println("email: " + user.getEmail());
+                System.out.println("email: " + user.getDate());
                 System.out.println("userId: " + user.getUserId());
-                System.out.println("FirstName: " + user.getFirstName());
+                System.out.println("FirstName: " + user.getAppointment());
                 System.out.println("Location: " + user.getLocation());
             trans.commit();
         } catch (Exception e) {
@@ -59,12 +59,12 @@ public class UserDB {
         }       
     }
 
-    public static User selectUser(String email) {
+    public static User selectUser(String date) {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         String qString = "SELECT u FROM User u " +
-                "WHERE u.email = :email";
+                "WHERE u.date = :date";
         TypedQuery<User> q = em.createQuery(qString, User.class);
-        q.setParameter("email", email);
+        q.setParameter("date", date);
         try {
             User user = q.getSingleResult();
             return user;

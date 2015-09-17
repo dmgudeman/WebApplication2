@@ -3,23 +3,23 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
+    <title>APPOINTMENTS</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>    
 </head>
 
 <body>
-    <h1>Thanks for joining our email list</h1>
+    <h1>Thanks</h1>
 
     <p>Here is the information that you entered:</p>
 
-    <label>Email:</label>
-    <span>${user.email}</span><br>
-    <label>First Name:</label>
-    <span>${user.firstName}</span><br>
+    <label>Date:</label>
+    <span>${user.date}</span><br>
+    <label>Appointment:</label>
+    <span>${user.appointment}</span><br>
     <label>Location:</label>
     <span>${user.location}</span><br>
 
-    <p>To enter another email address, click on the Back 
+    <p>To enter another appointment, click on the Back 
     button in your browser or the Return button shown 
     below.</p>
 

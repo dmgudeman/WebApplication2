@@ -2,21 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
+    <title>Appointments</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
-    <h1>Join our email list</h1>
-    <p>To join our email list, enter your name and
-       email address below.</p>
+    <h1>INPUT APPOINTMENT</h1>
+    <p>Please fill in the boxes.</p>
     <p><i>${message}</i></p>
     <form action="emailList" method="post">
         <input type="hidden" name="action" value="add">        
-        <label class="pad_top">Email:</label>
-        <input type="email" name="email" value="${user.email}" 
+        <label class="pad_top">Date:</label>
+        <input type="text" name="date" value="${user.date}" 
                required><br>
-        <label class="pad_top">First Name:</label>
-        <input type="text" name="firstName" value="${user.firstName}" 
+        <label class="pad_top">Appointment:</label>
+        <input type="text" name="appointment" value="${user.appointment}" 
                required><br>
         <label class="pad_top">Location:</label>
         <input type="text" name="location" value="${user.location}"  

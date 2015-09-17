@@ -27,30 +27,31 @@ public class EmailListServlet extends HttpServlet {
         } 
         else if (action.equals("add")) {
             // get parameters from the request
-            String firstName = request.getParameter("firstName");
+            String date = request.getParameter("date");
+            String appointment = request.getParameter("appointment");
             String location = request.getParameter("location");
-            String email = request.getParameter("email");
+           
 
             // store data in User object
             User user = new User();
-            user.setEmail(email);
-            user.setFirstName(firstName);
+            user.setDate(date);
+            user.setAppointment(appointment);
             user.setLocation(location);
 
             // validate the parameters
             String message;
-            if (UserDB.emailExists(user.getEmail())) {
-                message = "This email address already exists.<br>" +
-                          "Please enter another email address.";
+            if (UserDB.emailExists(user.getDate())) {
+                message = "This date has been used.<br>" +
+                          "Please enter another date.";
                 url = "/index.jsp";
             }
             else {
                 message = "";
                 url = "/thanks.jsp";
                 System.out.println("THIS IS IN doPOST" );
-                System.out.println("email: " + user.getEmail());
+                System.out.println("email: " + user.getDate());
                 System.out.println("userId: " + user.getUserId());
-                System.out.println("FirstName: " + user.getFirstName());
+                System.out.println("FirstName: " + user.getAppointment());
                 System.out.println("LastName" + user.getLocation());
                 UserDB.insert(user);
             }
