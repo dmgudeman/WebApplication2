@@ -17,7 +17,7 @@ public class UserDB {
             em.persist(user);
             System.out.println("THIS IS USERDB" );
                 System.out.println("email: " + user.getDate());
-                System.out.println("userId: " + user.getUserId());
+                System.out.println("apptId: " + user.getApptId());
                 System.out.println("FirstName: " + user.getAppointment());
                 System.out.println("Location: " + user.getLocation());
             trans.commit();
